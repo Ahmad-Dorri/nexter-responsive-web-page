@@ -10,13 +10,40 @@ html {
   box-sizing: border-box; }
 
 body {
+  font-size: 2.5rem;
+  color: white;
   font-family: "Nunito", sans-serif;
-  color: #6d5d4b;
   font-weight: 300;
   line-height: 1.6; }
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw min-content min-content min-content;
+  grid-template-columns: repeat(8, 14rem); }
 
 .sidebar {
   background-color: violet; }
 
+.header {
+  background-color: greenyellow; }
+
+.realtors {
+  background-color: burlywood; }
+
 .features {
   background-color: orangered; }
+
+.story__pictures {
+  background-color: olive; }
+
+.story__content {
+  background-color: saddlebrown; }
+
+.homes {
+  background-color: navy; }
+
+.gallery {
+  background-color: darkcyan; }
+
+.footer {
+  background-color: blueviolet; }
