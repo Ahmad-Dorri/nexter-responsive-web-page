@@ -3,47 +3,73 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 html {
   font-size: 62.5%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
-  font-size: 2.5rem;
-  color: white;
   font-family: "Nunito", sans-serif;
+  color: #6d5d4b;
   font-weight: 300;
-  line-height: 1.6; }
+  line-height: 1.6;
+}
 
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw min-content min-content min-content;
-  grid-template-columns: repeat(8, 14rem); }
+  grid-template-columns: [side-start] 8rem [side-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+.container > * {
+  font-size: 3rem;
+  padding: 4rem;
+}
 
 .sidebar {
-  background-color: violet; }
+  background-color: #c69963;
+  grid-column: side-start/side-end;
+  grid-row: 1/-1;
+}
 
 .header {
-  background-color: greenyellow; }
+  background-color: #54483a;
+  grid-column: full-start/col-end 6;
+}
 
 .realtors {
-  background-color: burlywood; }
+  background-color: #101d2c;
+  grid-column: col-start 7/full-end;
+}
 
 .features {
-  background-color: orangered; }
+  background-color: #aaa;
+  grid-column: center-start/center-end;
+}
 
 .story__pictures {
-  background-color: olive; }
-
+  background-color: #c69963;
+  grid-column: full-start/col-end 4;
+}
 .story__content {
-  background-color: saddlebrown; }
+  grid-column: col-start 5/full-end;
+}
 
 .homes {
-  background-color: navy; }
+  background-color: #101d2c;
+  grid-column: center-start/center-end;
+}
 
 .gallery {
-  background-color: darkcyan; }
+  background-color: #54483a;
+  grid-column: full-start/full-end;
+}
 
 .footer {
-  background-color: blueviolet; }
+  background-color: #101d2c;
+  grid-column: full-start/full-end;
+}
+
+/*# sourceMappingURL=style.css.map */
