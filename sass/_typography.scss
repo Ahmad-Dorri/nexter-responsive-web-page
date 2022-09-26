@@ -6,6 +6,8 @@
 .heading {
   &-1 {
     @extend %heading;
+    font-size: 4.5rem;
+    color: #fff;
   }
   &-2 {
     @extend %heading;
